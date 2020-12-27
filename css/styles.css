@@ -198,7 +198,6 @@ span {
 .list {
   display: flex;
   align-items: center;
-  /* padding-top: 94px; */
   padding-bottom: 94px;
 }
 .list-article {
@@ -285,7 +284,7 @@ span {
 }
 /* ------секция 4--------------- */
 .command {
-  padding-bottom: 94px;
+  /* padding-bottom: 94px; */
   padding-top: 94px;
   background-color: #f5f4fa;
 }
@@ -352,6 +351,84 @@ span {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+/*  СЕКЦИЯ 5  КЛИЕНТЫ */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  background-color: var(--active-color);
+  border-radius: 3%;
+  border: 1px solid #afb1b8;
+}
+.client-icon.logo-1 {
+  width: 44px;
+  height: 49px;
+  fill: #afb1b8;
+}
+.client-icon.logo-2 {
+  width: 40px;
+  height: 52px;
+  fill: #afb1b8;
+}
+.client-icon.logo-3 {
+  width: 41px;
+  height: 42px;
+  fill: #afb1b8;
+}
+.client-icon.logo-4 {
+  width: 80px;
+  height: 42px;
+  fill: #afb1b8;
+}
+.client-icon.logo-5 {
+  width: 59px;
+  height: 47px;
+  fill: #afb1b8;
+}
+.client-icon.logo-6 {
+  width: 88px;
+  height: 45px;
+  fill: #afb1b8;
+}
+/* ДИНАМИКА ЦВЕТА ССЫЛКИ И КАРТИНКИ */
+.client-link:focus,
+.client-link:hover {
+  border-color: var(--accent-color);
+}
+.client-link:focus .client-icon.logo-1,
+.client-link:hover .client-icon.logo-1 {
+  fill: var(--accent-color);
+}
+.client-link:focus .client-icon.logo-2,
+.client-link:hover .client-icon.logo-2 {
+  fill: var(--accent-color);
+}
+.client-link:focus .client-icon.logo-3,
+.client-link:hover .client-icon.logo-3 {
+  fill: var(--accent-color);
+}
+.client-link:focus .client-icon.logo-4,
+.client-link:hover .client-icon.logo-4 {
+  fill: var(--accent-color);
+}
+.client-link:focus .client-icon.logo-5,
+.client-link:hover .client-icon.logo-5 {
+  fill: var(--accent-color);
+}
+.client-link:focus .client-icon.logo-6,
+.client-link:hover .client-icon.logo-6 {
+  fill: var(--accent-color);
+}
 /*--footer--*/
 footer {
   display: block;
@@ -360,6 +437,41 @@ footer {
   padding-top: 60px;
   margin: 0 auto;
 }
+.container.footer {
+  display: flex;
+}
+.left {
+  margin-right: 70px;
+}
+.right {
+  display: block;
+}
+.icons-right {
+  display: flex;
+  justify-content: space-between;
+}
+.icon:not(:last-child) {
+  margin-right: 10px;
+}
+.link-right:hover,
+.link-right:focus {
+  background-color: var(--accent-color);
+}
+.link-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+.icon-right {
+  fill: var(--active-color);
+  width: 20px;
+  height: 20px;
+}
+
 .logo-footer {
   display: block;
   margin-bottom: 20px;
@@ -385,6 +497,17 @@ footer {
 .footer-mail {
   margin-bottom: 9px;
 }
+.title-right {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: var(--active-color);
+  margin-bottom: 30px;
+}
+
 /* СТИЛИ ДЛЯ ПОРТФОЛИО */
 /* --------кнопки--------- */
 .total {
