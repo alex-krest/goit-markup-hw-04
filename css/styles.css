@@ -79,47 +79,29 @@ li {
   display: flex;
   align-items: center;
 }
-.mail-icon {
-  display: block;
-  margin-right: 10px;
-  cursor: pointer;
-}
-.mail-header:focus > .mail-icon,
-.mail-header:hover > .mail-icon {
-  background-color: var(--accent-color);
-}
-.nav-mail {
-  display: flex;
-  align-items: center;
-}
+.mail-icon,
 .phone-icon {
+  fill: var(--text-color);
   display: block;
   margin-right: 10px;
   cursor: pointer;
+}
+.mail-header:focus .nav-mail,
+.mail-header:hover .nav-mail {
+  color: var(--accent-color);
+}
+.phone-header:hover .nav-phone,
+.phone-header:focus .nav-phone {
+  color: var(--accent-color);
+}
+.mail-header:focus .mail-icon,
+.mail-header:hover .mail-icon {
+  fill: var(--accent-color);
 }
 .phone-header:hover > .phone-icon,
 .phone-header:focus > .phone-icon {
-  background-color: var(--accent-color);
+  fill: var(--accent-color);
 }
-/* .mail-header::before{
-	content:"";
-	display: flex;
-	background-image: url(../imaiges-svg/envelope.svg);
-	width: 16px;height: 12px;
-	margin-right: 10px;
-	background-size:cover;
-	background-repeat: no-repeat;
-}
-.phone-header::before{	content:"";
-	display: flex;
-	background-image: url(../imaiges-svg/smartphone.svg);
-	width: 10px;height: 16px;
-	margin-right: 10px;
-	background-size:cover;
-	background-repeat: no-repeat;}
-
-.mail-header:hover:before,
-.mail-header:focus:before{background-color:var(--accent-color);} */
 
 .nav-mail {
   margin-right: 50px;
@@ -158,26 +140,29 @@ span {
   font-style: normal;
   color: var(--text-color);
 }
-.nav-mail:hover {
-  color: var(--accent-color);
-}
-.nav-mail:focus {
-  color: var(--accent-color);
-}
-.nav-phone:hover {
-  color: var(--accent-color);
-}
-.nav-phone:focus {
-  color: var(--accent-color);
-}
+
 /*--секция 1 ГЕРОЙ--*/
+
 .hero {
   background-color: var(--hero-color);
   height: 600px;
   text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.hero {
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imaiges/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -213,7 +198,7 @@ span {
 .list {
   display: flex;
   align-items: center;
-  padding-top: 94px;
+  /* padding-top: 94px; */
   padding-bottom: 94px;
 }
 .list-article {
@@ -224,7 +209,40 @@ span {
 }
 .list-item {
   width: 270px;
-  height: 101px;
+}
+.list-item::before {
+  content: "";
+  display: block;
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  margin-top: 94px;
+  margin-bottom: 30px;
+}
+.antenna::before {
+  background-image: url(../imaiges-svg/antenna-1.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.diagram::before {
+  background-image: url(../imaiges-svg/diagram-1.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.astronaut::before {
+  background-image: url(../imaiges-svg/astronaut-1.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clock::before {
+  background-image: url(../imaiges-svg/clock-1.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .list-caption {
   font-weight: 700;
@@ -276,9 +294,45 @@ span {
   align-items: center;
   text-align: center;
 }
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--active-color);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* ДИНАМИКА ЦВЕТА ССЫЛКИ И КАРТИНКИ */
+.social-link:focus,
+.social-link:hover {
+  background-color: var(--accent-color);
+}
+.social-link:focus .social-icon,
+.social-link:hover .social-icon {
+  fill: var(--active-color);
+}
+/* -------------------------- */
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
 .command-article:not(:last-child) {
   margin-right: 30px;
 }
+/* из макета правильно не вставляется   */
+/* .command-article {
+  box-shadow: 0px 4px 4px 0px #000000 25;
+} */
+
 .command-subject {
   font-weight: 500;
   font-size: 16px;
