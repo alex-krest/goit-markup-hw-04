@@ -86,21 +86,23 @@ li {
   margin-right: 10px;
   cursor: pointer;
 }
-/* .mail-header:focus .mail-icon, */
-.mail-header:hover .mail-icon {
-  fill: var(--accent-color);
-}
-/* .mail-header:focus .nav-mail, */
-.mail-header:hover .nav-mail {
+
+.nav-mail:focus,
+.nav-mail:hover {
   color: var(--accent-color);
 }
-/* .phone-header:focus .phone-icon, */
-.phone-header:hover .phone-icon {
+.nav-phone:focus,
+.nav-phone:hover {
+  color: var(--accent-color);
+}
+
+.nav-mail:focus .mail-icon,
+.nav-mail:hover .mail-icon {
   fill: var(--accent-color);
 }
-/* .phone-header:focus .nav-phone, */
-.phone-header:hover .nav-phone {
-  color: var(--accent-color);
+.nav-phone:focus .phone-icon,
+.nav-phone:hover .phone-icon {
+  fill: var(--accent-color);
 }
 
 .nav-mail {
