@@ -139,7 +139,8 @@ span {
 }
 .nav-mail,
 .nav-phone {
-  display: block;
+  display: flex;
+  align-items: center;
   font-style: normal;
   color: var(--text-color);
 }
